@@ -12,3 +12,7 @@ class PrincipalView(generic.ListView):
             new_valor = valor + 1
             Objeto.objects.filter(pk=toggle).update(cont = new_valor)
         return Objeto.objects.all().distinct()
+    
+
+class LandingView(generic.TemplateView):
+    template_name = "landing.html"
